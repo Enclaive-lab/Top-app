@@ -1,0 +1,257 @@
+.page { color: var(--text); }
+.eyebrow { margin-bottom: 16px; color: var(--primary); font-size: 11px; letter-spacing: 1.5px; font-weight: 700; }
+.intro { max-width: 760px; margin: -5px 5px 25px; font-size: 16px; line-height: 26px; }
+.productList { display: grid; gap: 28px; }
+.providerTile {
+  position: relative; isolation: isolate; display: grid; place-items: center;
+  width: 70px; height: 70px; flex-shrink: 0; border-radius: 16px;
+  border: 1px solid rgb(255 255 255 / 24%); color: white;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 24%), 0 4px 10px rgb(34 24 64 / 10%);
+}
+.providerTile::before {
+  content: ""; position: absolute; inset: 5px; z-index: -1;
+  border: 1px solid rgb(255 255 255 / 14%); border-radius: 11px;
+}
+.providerTile svg { display: block; width: 34px; height: 34px; }
+.purple { background: linear-gradient(145deg, #8b6dff, #6744df); }
+.dark { background: linear-gradient(145deg, #50566f, #303343); }
+.green { background: linear-gradient(145deg, #45a891, #267466); }
+.orange { background: linear-gradient(145deg, #d4865d, #ad5533); }
+.ratingStars { display: inline-flex; gap: 5px; width: 120px; height: 20px; }
+.ratingStar { display: block; position: relative; flex: 0 0 20px; width: 20px; height: 20px; }
+.starBase { display: block; color: #d4d7dd; }
+.starProgress { position: absolute; top: 0; left: 0; height: 20px; overflow: hidden; color: var(--primary); }
+.starProgress svg { display: block; min-width: 20px; }
+.reviewAvatar { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: var(--primary); background: #ece6ff; }
+.reviewsTitle { margin-bottom: 24px; font-size: 22px; font-weight: 500; }
+.review + .review { padding-top: 24px; }
+.categoryLinks { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+.categoryLinks a { padding: 8px 14px; border: 1px solid #ded9f0; border-radius: 20px; font-size: 13px; background: white; }
+.categoryLinks a:hover { color: var(--primary); border-color: var(--primary); }
+.emptyState { padding: 40px; background: white; border-radius: 5px; }
+.emptyState p { margin: 15px 0 24px; line-height: 25px; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; color: #787d85; font-size: 13px; }
+.breadcrumbs a:hover { color: var(--primary); }
+.detailTitle { margin-bottom: 15px; font-size: 30px; line-height: 1.4; font-weight: 500; }
+.infoPanel { margin-top: 30px; padding: 30px; background: white; border-radius: 5px; box-shadow: var(--card-shadow); }
+.infoPanel h2 { margin-bottom: 20px; font-size: 22px; font-weight: 500; }
+.infoPanel p { margin: 16px 0; line-height: 1.8; }
+.moduleList { list-style: none; counter-reset: module; }
+.moduleList li { counter-increment: module; display: flex; gap: 18px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border); line-height: 1.6; }
+.moduleList li::before { content: counter(module, decimal-leading-zero); color: var(--primary); font-weight: 600; font-size: 14px; }
+.relatedTitle { margin: 40px 0 24px; font-size: 24px; font-weight: 500; }
+.searchBox { max-width: 650px; margin-bottom: 28px; }
+.courseName h2 a:hover { color: var(--primary); }
+.reviewText { overflow-wrap: anywhere; white-space: pre-wrap; }
+.pageHeading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 0 5px 20px; }
+.title { display: flex; align-items: center; gap: 20px; }
+.title h1 { font-size: 26px; line-height: 36px; font-weight: 500; }
+.count { display: inline-grid; place-items: center; min-width: 37px; height: 25px; padding: 0 8px; border-radius: 20px; background: #b3c0d9; color: white; font-size: 14px; font-weight: 600; }
+.courseGroup { border-radius: 5px; box-shadow: var(--card-shadow); overflow: hidden; }
+.card { padding: 30px; background: white; }
+.cardHeader { display: grid; grid-template-columns: 70px minmax(200px, 1fr) auto auto 120px; align-items: center; gap: 30px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.school { border-radius: 5px; }
+.nameRow { display: flex; align-items: center; gap: 20px; }
+.courseName h2 { font-size: 20px; line-height: 27px; font-weight: 600; }
+.trophy { flex-shrink: 0; display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid #dcb44e; border-radius: 5px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; list-style: none; margin-top: 7px; }
+.tags li, .employment { display: inline-block; padding: 3px 10px; border: 1px solid var(--border); border-radius: 20px; font-size: 12px; line-height: 14px; font-weight: 500; }
+.priceRow { display: flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 20px; }
+.discount { padding: 4px 7px; border-radius: 20px; background: #c8f8e4; color: #1dc37e; font-size: 12px; line-height: 14px; font-weight: 700; }
+.caption { display: block; margin-top: 3px; font-size: 14px; font-weight: 300; }
+.credit { font-size: 20px; white-space: nowrap; }
+.credit small { font-size: 14px; }
+.rating { text-align: center; }
+.rating img { display: block; }
+.description { margin: 22px 0; font-size: 16px; line-height: 24px; }
+.courseDetails { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; }
+.features { margin-bottom: 14px; font-size: 16px; line-height: 32px; }
+.features > div { display: flex; align-items: baseline; gap: 8px; }
+.features dt { font-weight: 700; }
+.features span { flex: 1; min-width: 10px; border-bottom: 1px dotted #c4c4c4; }
+.features dd { font-weight: 500; text-align: right; white-space: nowrap; }
+.prosCons { display: grid; gap: 20px; }
+.pros, .cons { padding-left: 15px; border-left: 3px solid #1dc37e; }
+.cons { border-color: #fc836d; }
+.prosCons h3 { margin-bottom: 6px; font-size: 16px; font-weight: 700; }
+.prosCons p { font-size: 16px; line-height: 22px; }
+.actions { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--border); }
+.primaryButton, .secondaryButton { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-width: 148px; min-height: 35px; padding: 9px 10px; border: 1px solid transparent; border-radius: 5px; font: inherit; font-size: 14px; line-height: 16px; cursor: pointer; transition: background var(--motion-fast), transform var(--motion-fast) var(--motion-ease); }
+.primaryButton { background: var(--primary); color: white; }
+.primaryButton:hover { background: #6344df; }
+.secondaryButton { border-color: var(--border); background: white; color: var(--text); }
+.secondaryButton:hover { background: #f5f3ff; }
+.reviews { padding: 26px 30px 30px; background: #f9f8ff; scroll-margin-top: 24px; }
+.review { padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.reviewHeader { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto 120px; gap: 12px; align-items: center; font-size: 14px; }
+.reviewAuthor { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.reviewHeader time { margin-right: 8px; white-space: nowrap; }
+.reviewText { margin-top: 12px; font-size: 14px; line-height: 24px; }
+.reviewForm { padding-top: 30px; }
+.formTop { display: grid; grid-template-columns: 218px 218px minmax(0, 1fr); align-items: start; gap: 30px; }
+.formField { min-width: 0; }
+.ratingControl { min-width: 0; justify-self: end; padding-top: 6px; }
+.fieldError { margin-top: 8px; color: #b42318; font-size: 12px; line-height: 18px; }
+.reviewForm input:not([type=radio])[aria-invalid=true], .reviewForm textarea[aria-invalid=true] { border-color: #d92d20; }
+.ratingField[aria-invalid=true] .starChoices { outline: 1px solid #d92d20; outline-offset: 3px; border-radius: 3px; }
+.reviewForm button:disabled { opacity: .6; cursor: wait; }
+.reviewForm input:not([type=radio]) { width: 100%; padding: 8px 12px; border: 1px solid transparent; border-radius: 5px; background: white; color: var(--text); font: inherit; font-size: 16px; line-height: 20px; box-shadow: var(--card-shadow); }
+.reviewForm input::placeholder { color: #a4a4a4; }
+.reviewTextarea { margin-top: 20px; }
+.ratingField { display: flex; justify-content: flex-end; align-items: center; gap: 20px; border: 0; min-width: 0; }
+.ratingField legend { float: left; font-size: 14px; padding: 0; }
+.starChoices { display: flex; gap: 4px; }
+.starChoice { display: block; position: relative; width: 20px; height: 24px; cursor: pointer; }
+.starChoice input { position: absolute; opacity: 0; width: 20px; height: 24px; cursor: pointer; }
+.starEmpty, .starFilled { display: block; width: 20px; height: 20px; position: absolute; top: 2px; pointer-events: none; color: #d4d7dd; }
+.starFilled { opacity: 0; color: var(--primary); transition: opacity var(--motion-fast) ease; }
+.starChoices:has(input:checked) .starChoice .starFilled { opacity: 1; }
+.starChoices .starChoice:has(input:checked) ~ .starChoice .starFilled { opacity: 0; }
+.starChoice:has(input:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
+.starChoices:hover .starChoice .starFilled { opacity: 1; }
+.starChoices .starChoice:hover ~ .starChoice .starFilled { opacity: 0; }
+.formBottom { display: flex; align-items: center; gap: 13px; margin-top: 20px; }
+.formBottom p { font-size: 14px; line-height: 24px; }
+.formMessage { margin-top: 10px; font-size: 14px; color: var(--primary); }
+.formMessage:empty { display: none; }
+.vacancies { margin-top: 50px; }
+.sectionHeading { display: flex; align-items: center; gap: 20px; margin: 0 5px 28px; }
+.sectionHeading h2, .benefits > h2, .skills h2 { font-size: 22px; line-height: 30px; font-weight: 500; }
+.hh { display: inline-grid; place-items: center; min-width: 62px; height: 25px; border-radius: 20px; background: #de0000; color: white; font-size: 14px; font-weight: 600; }
+.jobs { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 30px; }
+.jobCount, .salaries { padding: 21px 0 17px; border-radius: 5px; background: white; box-shadow: var(--card-shadow); }
+.jobCount { text-align: center; }
+.jobs h3 { font-size: 20px; line-height: 27px; font-weight: 300; }
+.jobCount strong { display: block; margin-top: 12px; color: var(--primary); font-size: 36px; line-height: 49px; }
+.salaries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.salary { padding: 0 12px; text-align: center; }
+.salary + .salary { border-left: 1px solid var(--border); }
+.salary strong { display: block; margin: 10px 0 12px; font-size: 26px; line-height: 35px; white-space: nowrap; }
+.salaryRating { display: flex; justify-content: center; gap: 10px; }
+.salaryActive { color: #fc836d; }
+.salaryMuted { color: #b7bbc2; }
+.benefits { margin-top: 45px; scroll-margin-top: 24px; }
+.benefits > h2 { margin: 0 5px 30px; }
+.benefitList { list-style: none; display: grid; gap: 30px; margin: 0 8px; }
+.benefit { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 40px; position: relative; }
+.benefit::after { content: ""; position: absolute; left: 25px; top: 65px; bottom: 0; width: 1px; background: #dfdfdf; }
+.benefitIcon { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 50%; background: #c8f8e4; color: #1dc37e; }
+.benefit h3 { margin: 12px 0 22px; font-size: 20px; line-height: 27px; font-weight: 700; }
+.benefit p, .summary { font-size: 18px; line-height: 29px; }
+.summary { margin: 30px 22px 0; }
+.skills { margin: 30px 5px 8px; }
+.skillTags { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin-top: 25px; }
+.skillTags li { border: 1px solid var(--primary); border-radius: 20px; padding: 3px 10px; color: var(--primary); font-size: 12px; line-height: 14px; font-weight: 500; }
+@media (max-width: 1300px) {
+  .cardHeader { grid-template-columns: 70px minmax(0, 1fr) 120px; gap: 20px; }
+  .priceBlock { grid-column: 2; grid-row: 2; }
+  .credit { grid-column: 3; grid-row: 2; }
+  .rating { grid-column: 3; grid-row: 1; }
+  .courseDetails { gap: 30px; }
+  .jobs { grid-template-columns: 200px minmax(0, 1fr); gap: 20px; }
+  .salary strong { font-size: 22px; }
+  .jobs h3 { font-size: 17px; }
+  .formTop { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .ratingControl { grid-column: 1 / -1; justify-self: start; padding-top: 0; }
+  .ratingField { justify-content: flex-start; }
+}
+@media (max-width: 1050px) {
+  .pageHeading { align-items: flex-start; flex-direction: column; }
+  .courseDetails { grid-template-columns: 1fr; gap: 24px; }
+  .reviewHeader { grid-template-columns: 30px minmax(0, 1fr); }
+  .reviewHeader time { grid-column: 2; }
+  .reviewHeader > .ratingStars { grid-column: 2; }
+  .jobs { grid-template-columns: 1fr; }
+  .jobCount { display: flex; justify-content: center; align-items: center; gap: 25px; padding: 20px; }
+  .jobCount strong { margin: 0; }
+}
+@media (max-width: 600px) {
+  .detailTitle { font-size: 24px; }
+  .infoPanel, .emptyState { padding: 22px; }
+  .features dd { white-space: normal; }
+  .title { min-width: 0; }
+  .title h1 { overflow-wrap: anywhere; }
+  .count { flex-shrink: 0; }
+  .pageHeading { gap: 12px; margin: 0 0 20px; }
+  .title { gap: 10px; }
+  .title h1 { font-size: 22px; line-height: 30px; }
+  .card { padding: 20px; }
+  .cardHeader { grid-template-columns: 70px minmax(0, 1fr); gap: 18px 14px; }
+  .courseName h2 { font-size: 17px; line-height: 24px; }
+  .nameRow { gap: 8px; }
+  .trophy { width: 26px; height: 26px; }
+  .priceBlock { grid-row: 2; grid-column: 1 / -1; }
+  .credit { grid-row: 3; grid-column: 1; }
+  .rating { grid-row: 3; grid-column: 2; justify-self: end; }
+  .caption { font-size: 12px; }
+  .credit { font-size: 18px; }
+  .description { font-size: 14px; line-height: 23px; }
+  .features { font-size: 12px; line-height: 30px; }
+  .features > div { gap: 4px; }
+  .features span { min-width: 4px; }
+  .prosCons p { font-size: 14px; line-height: 23px; }
+  .actions { gap: 10px; }
+  .actions > a { flex: 1; min-width: 125px; font-size: 12px; }
+  .reviews { padding: 22px 20px; }
+  .reviewAuthor { gap: 4px; }
+  .reviewHeader { font-size: 12px; }
+  .reviewText { font-size: 13px; line-height: 23px; }
+  .formTop { grid-template-columns: 1fr; gap: 15px; }
+  .reviewForm { padding-top: 22px; }
+  .ratingControl { grid-column: auto; }
+  .ratingField { margin: 3px 0; }
+  .formBottom { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .formBottom p { font-size: 12px; line-height: 20px; }
+  .vacancies { margin-top: 35px; }
+  .sectionHeading { margin: 0 0 20px; gap: 12px; }
+  .sectionHeading h2, .benefits > h2, .skills h2 { font-size: 20px; }
+  .hh { min-width: 52px; }
+  .salaries { grid-template-columns: 1fr; padding: 0 20px; }
+  .salary { padding: 20px 0; }
+  .salary + .salary { border-left: 0; border-top: 1px solid var(--border); }
+  .jobs h3 { font-size: 18px; }
+  .salary strong { font-size: 26px; }
+  .benefits { margin-top: 35px; }
+  .benefits > h2 { margin: 0 0 20px; }
+  .benefitList { margin: 0; gap: 25px; }
+  .benefit { gap: 15px; }
+  .benefit h3 { margin: 10px 0 15px; font-size: 16px; line-height: 24px; }
+  .benefit p, .summary { font-size: 14px; line-height: 24px; }
+  .summary { margin: 25px 0 0; }
+  .skills { margin: 25px 0 0; }
+  .skillTags { margin-top: 18px; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .primaryButton, .secondaryButton { transition: none; } }
+
+.categoryLinks a { transition: color var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast) var(--motion-ease); }
+.courseName h2 a { transition: color var(--motion-fast); }
+.secondaryButton svg { transition: transform var(--motion-fast) var(--motion-ease); }
+.starChoice svg { transition: transform var(--motion-fast) var(--motion-ease); }
+
+@keyframes owltop-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes owltop-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pageHeading, .detailTitle, .emptyState { animation: owltop-rise var(--motion-enter) var(--motion-ease); }
+  .card { animation: owltop-rise var(--motion-enter) var(--motion-ease) backwards; }
+  .productList > :nth-child(2) .card { animation-delay: 35ms; }
+  .productList > :nth-child(3) .card { animation-delay: 70ms; }
+  .productList > :nth-child(4) .card { animation-delay: 105ms; }
+  .productList > :nth-child(n + 5) .card { animation-delay: 140ms; }
+  .reviews, .infoPanel { animation: owltop-fade var(--motion-enter) ease-out; }
+  .review, .formMessage:not(:empty), .fieldError { animation: owltop-rise var(--motion-enter) var(--motion-ease); }
+  .primaryButton:active:not(:disabled), .secondaryButton:active { transform: translateY(1px); }
+  .starChoice:has(input:checked) svg { transform: scale(1.1); }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .primaryButton:hover:not(:disabled), .secondaryButton:hover, .categoryLinks a:hover { transform: translateY(-2px); }
+  .secondaryButton:hover svg { transform: translateX(3px); }
+}

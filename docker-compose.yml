@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    image: top-app
+    container_name: top-app
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3002:3000"

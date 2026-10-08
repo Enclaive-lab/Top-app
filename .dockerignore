@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+build
+coverage
+.git
+.husky
+.vscode
+.idea
+.codex
+.agents
+.env*
+*.tsbuildinfo
+*.log
+*.pem
+.DS_Store
+CONTINUITY.md

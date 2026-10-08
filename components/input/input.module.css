@@ -1,0 +1,14 @@
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  box-shadow: var(--card-shadow);
+}
+.input::placeholder { color: #a4a4a4; }
+.input:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }

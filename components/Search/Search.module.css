@@ -1,0 +1,11 @@
+.search { display: flex; align-items: center; min-width: 0; height: 36px; padding: 3px; border-radius: 5px; background: white; box-shadow: var(--card-shadow); }
+.search .input { min-width: 0; width: 100%; height: 30px; padding: 0 12px; border: 0; border-radius: 3px; background: transparent; color: var(--text); font: inherit; font-size: 16px; box-shadow: none; }
+.search .input::placeholder { color: #a4a4a4; }
+.search button { display: grid; place-items: center; width: 30px; height: 30px; flex-shrink: 0; border: 0; border-radius: 5px; background: var(--primary); color: white; cursor: pointer; }
+.search button:hover { background: #6344df; }
+.search:focus-within { outline: 2px solid var(--primary); outline-offset: 2px; }
+.search .input:focus { outline: none; }
+.search button { transition: background var(--motion-fast), transform var(--motion-fast) var(--motion-ease); }
+@media (prefers-reduced-motion: no-preference) {
+  .search button:active { transform: scale(0.92); }
+}
