@@ -38,9 +38,16 @@ yarn-error.log*
 /CONTINUITY.md
 /CLAUDE.md
 
+# local provider-installed assistant skills
+/.agents/
+/skills-lock.json
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+.env*

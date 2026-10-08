@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports -- Standalone CommonJS import script. */
 // Import the preserved catalog through the public API without deleting records.
 const fs = require("node:fs");
 const path = require("node:path");

@@ -1,0 +1,13 @@
+.git
+.next
+node_modules
+.env*
+.agents
+.codex
+skills-lock.json
+CONTINUITY.md
+CLAUDE.md
+*.tsbuildinfo
+*.db
+*.db-wal
+*.db-shm

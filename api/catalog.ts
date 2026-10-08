@@ -1,4 +1,6 @@
+import "server-only";
 import { cache } from "react";
+import { usesCloudApi } from "@/lib/api-backend";
 import { connection } from "next/server";
 import { categories as categoryDefinitions, type CatalogCategory, type CatalogItem, type CatalogKind } from "@/data/catalog";
 
@@ -42,7 +44,11 @@ const sectionQueries: { kind: CatalogKind; category: string }[] = [
   { kind: "product", category: "products" },
 ];
 
-export async function requestApi<T>(path: string, body?: unknown): Promise<T> {
+export async function requestApi<T>(path: string, body?: unknown, clientKey?: string): Promise<T> {
+  if (usesCloudApi()) {
+    const { getCloudApi } = await import("@/lib/database");
+    return await getCloudApi()(path, body, clientKey) as T;
+  }
   const base = process.env.NEXT_PUBLIC_DOMAIN;
   if (!base) throw new Error("Не задан адрес API (NEXT_PUBLIC_DOMAIN).");
   const response = await fetch(`${base.replace(/\/$/, "")}/api/${path}`, {
@@ -54,7 +60,10 @@ export async function requestApi<T>(path: string, body?: unknown): Promise<T> {
     cache: "no-store",
     signal: AbortSignal.timeout(8000),
   });
-  if (!response.ok) throw new Error(`API ${path}: HTTP ${response.status}`);
+  if (!response.ok) {
+    const { ApiError } = await import("@/lib/cloud-api");
+    throw new ApiError(response.status, `API: HTTP ${response.status}`);
+  }
   return response.json() as Promise<T>;
 }
 
