@@ -2,6 +2,10 @@
 
 Каталог курсов, книг, сервисов и товаров для творчества и профессионального развития. Next.js App Router, React, TypeScript, React Hook Form, CSS Modules и Lucide.
 
+Сайт-портфолио: [OwlTop](https://top-app-zeta-pearl.vercel.app).
+
+Изменения в ветке `main` проверяются в GitHub Actions и автоматически собираются Vercel через GitHub-интеграцию. Проверки и деплой запускаются независимо: Actions не являются блокирующим release gate.
+
 ## Commands
 
 Перед первым запуском установите зависимости через `npm ci` и скопируйте `.env.example` в `.env`. Запустите отдельный Top API на порту `3000`, затем `npm run dev`.
